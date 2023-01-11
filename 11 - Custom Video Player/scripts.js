@@ -6,6 +6,11 @@ const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const progress = player.querySelector('.progress');
 const progressBar = player.querySelector('.progress__filled');
+const fullscreen = player.querySelector('.fullscreen');
+
+fullscreen.addEventListener('click', () => {
+  player.requestFullscreen();
+});
 
 const togglePlay = () => {
   video.paused ? video.play() : video.pause();
