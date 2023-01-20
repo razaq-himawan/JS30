@@ -83,7 +83,12 @@ const greenScreen = pixels => {
     blue = pixels.data[i + 2];
     alpha = pixels.data[i + 3];
 
-    if (red >= levels.rmin && green >= levels.gmin && blue >= levels.bmin && red <= levels.rmax && green <= levels.gmax && blue <= levels.bmax) {
+    if (red >= levels.rmin
+      && green >= levels.gmin
+      && blue >= levels.bmin
+      && red <= levels.rmax
+      && green <= levels.gmax
+      && blue <= levels.bmax) {
       // take it out!
       pixels.data[i + 3] = 0;
     }
